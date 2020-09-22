@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace WebRequestGetExample
+namespace postdata
 {
     public class Program
     {
@@ -13,7 +13,7 @@ namespace WebRequestGetExample
         static void Main(string[] args)
         {
 
-            PostJson("https://localhost:44337/api/Speakers", new Speaker
+            PostJson("https://localhost:44315/api/Speakers", new Speaker
             {
                 name = "Will Smith",
                 Bio = "likes to drive cars",

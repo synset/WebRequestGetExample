@@ -1,0 +1,55 @@
+﻿@model UIConferensPlanner.Models.Speaker
+@{
+    ViewData["Title"] = "Post Result";
+}
+
+<div class="bakgrund container bg-light">
+    <div class="column">
+        <div class="row">
+            <a href="/Home/PostResult" class="postButton btn btn-block disabled">Register speaker</a>
+        </div>
+
+        <div class="row">
+            <div class="input-group">
+                <span class="input-group-text col-12">Speaker successfully registered in Conference Planner</span>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Bio)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.WebSite)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(model => model.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.Bio)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => model.WebSite)
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="row">
+            <a href="/Home/PostRequest" class="newPostRequestButton btn">Register new speaker</a>
+            <a href="/Home/GetResult" class="newGetRequestButton btn">View speaker list</a>
+            <a href="Index" class="newPostRequestButton btn">Main menu</a>
+        </div>
+
+    </div>
+</div>

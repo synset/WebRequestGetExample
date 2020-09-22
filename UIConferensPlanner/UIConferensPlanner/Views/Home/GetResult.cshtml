@@ -1,0 +1,46 @@
+﻿@model IEnumerable<UIConferensPlanner.Models.Speaker>
+@{
+    ViewData["Title"] = "Get Result";
+}
+
+<div class="bakgrund container bg-light">
+    <div class="column">
+        <div class="row">
+            <a href="/Home/GetRequest" class="getButton btn btn-block disabled">List of speakers</a>        </div>
+        <div class="row">
+
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Bio)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.WebSite)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(Item => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(Item => item.Bio)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(Item => item.WebSite)
+                        </td>
+                    </tr>
+                }
+            </table>
+
+        </div>
+    </div>
+</div>
+<a href="/Home/PostRequest" class="newPostRequestButton btn">Register new speaker</a>
+<a href="Index" class="backToHomeButton btn btn-primary">Main menu</a>

@@ -2,7 +2,7 @@
 using System.IO;
 using System.Net;
 
-namespace WebRequestGetExample.System.Net
+namespace Examples.System.Net
 {
     public class WebRequestGetExample
     {
@@ -10,7 +10,7 @@ namespace WebRequestGetExample.System.Net
         {
             // Create a request for the URL.
             WebRequest request = WebRequest.Create(
-              "https://localhost:44337/api/Speakers/");
+              "https://localhost:44315/api/Speakers/");
             // If required by the server, set the credentials.
             request.Credentials = CredentialCache.DefaultCredentials;
 
