@@ -20,14 +20,12 @@ namespace BackEnd.Controllers
             _context = context;
         }
 
-        // GET: api/Speakers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Speaker>>> GetSpeakers()
         {
             return await _context.Speakers.ToListAsync();
         }
 
-        // GET: api/Speakers/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Speaker>> GetSpeaker(int id)
         {
@@ -41,9 +39,6 @@ namespace BackEnd.Controllers
             return speaker;
         }
 
-        // PUT: api/Speakers/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSpeaker(int id, Speaker speaker)
         {
@@ -73,9 +68,6 @@ namespace BackEnd.Controllers
             return NoContent();
         }
 
-        // POST: api/Speakers
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<Speaker>> PostSpeaker(Speaker speaker)
         {
@@ -85,7 +77,6 @@ namespace BackEnd.Controllers
             return CreatedAtAction("GetSpeaker", new { id = speaker.Id }, speaker);
         }
 
-        // DELETE: api/Speakers/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Speaker>> DeleteSpeaker(int id)
         {
