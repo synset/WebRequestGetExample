@@ -89,11 +89,6 @@ body {
     background-color: #3c9333;
 }
 
-.executePostRequestButton, .executeGetRequestButton, .newPostRequestButton, .newGetRequestButton {
+.executePostRequestButton, .executeGetRequestButton, .newPostRequestButton, .newGetRequestButton, .mainMenuButton {
     margin-right: 20px;
-}
-
-
-
-.cancelButton {
 }

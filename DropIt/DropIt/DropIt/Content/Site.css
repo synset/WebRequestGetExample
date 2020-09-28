@@ -1,0 +1,100 @@
+﻿/*color scheme:
+    #D5F3FE
+    #66D3FA
+    #3C99DC
+    #2565AE
+    #0F5298
+*/
+
+.navbar {
+    background-color: #2565AE;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+texarea {
+    background-color: white;
+    border-color: #2565AE;
+    border-style: solid;
+}
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: #D5F3FE;
+}
+
+.footer {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 20px; /* Vertically center the text there */
+}
+
+/*Home/Index*/
+.file-upload-wrapper, .header-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    height: 200px;
+}
+
+.file-upload-wrapper {
+    padding: 10px;
+}
+
+.file-upload-area {
+    height: 100px;
+    width: 300px;
+    padding: 10px;
+    margin: 20px;
+   
+}
+
+.display-all-files {
+    min-height: 200px;
+    height: auto;
+    margin: 20px;
+    background-color: white;
+}
+
+.textrow {
+    
+    background-color: #73AD21;
+    padding: 20px;
+   /* width: 200px;
+    height: 150px;*/
+}
+
+    

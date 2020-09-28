@@ -1,0 +1,49 @@
+﻿@model IEnumerable<string>
+@{
+    ViewBag.Title = "UploadFile";
+}
+
+<div class="file-upload-wrapper row">
+
+    <div class="file-upload-area col-6">
+        @using (Html.BeginForm("UploadFile", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div>
+                <h3>Upload file</h3>
+                @Html.TextBox("file", "", new { type = "file" })
+                <br />
+                <input type="submit" value="Upload" />
+                @ViewBag.Message
+            </div>
+        }
+    </div>
+
+    <div class="file-upload-area col-6">
+        @using (Html.BeginForm("DownloadFile", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div>
+                <h3>Upload file</h3>
+                @Html.TextBox("file", "", new { type = "file" })
+                <br />
+                <input type="submit" value="Upload" />
+                @ViewBag.Message
+            </div>
+        }
+    </div>
+
+    <div class="file-upload-area col-6">
+       
+        <div>
+            <h3>Download file</h3>
+            
+            @Html.Partial("_FileList")
+
+        </div>
+      
+        <div class="row">
+            @ViewBag.Message
+            @TempData["ErrorMessage"]
+        </div>
+    </div>
+</div>
+

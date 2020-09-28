@@ -13,8 +13,6 @@ namespace RestApi.Controllers
 {
     public class HomeController : Controller
     {
-        //GET request
-        //TODO: Display respons in GetResultPage
         public ActionResult GetResult()
         {
             string responseFromServer;
@@ -32,6 +30,11 @@ namespace RestApi.Controllers
             return View(mySpeakerList);
         }
 
+        public IActionResult PostRequest()
+        {
+            return View();
+        }
+
         [HttpGet]
         public IActionResult PostResult()
         {
@@ -39,8 +42,6 @@ namespace RestApi.Controllers
             return View(speaker);
         }
 
-        // POST Request
-        //TODO: Display respons in PostResultPage
         [HttpPost]
         public ActionResult PostResult(Speaker speaker)
         {
@@ -63,12 +64,6 @@ namespace RestApi.Controllers
         }
 
         public IActionResult Index()
-        {
-            return View();
-        }
-
-
-        public IActionResult PostRequest()
         {
             return View();
         }

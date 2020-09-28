@@ -1,0 +1,18 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewData["Title"] = "DropIt";
+}
+
+<ul>
+    @foreach (var fullPath in Model)
+    {
+        var fileName = Path.GetFileName(fullPath);
+        <li>
+            @fileName
+        </li>
+        <li>
+            @Html.ActionLink("DownloadFile", "DownloadFile", "Download", null, new { FileName = fileName, FullPath = fullPath })
+        </li>
+    }
+</ul> 
